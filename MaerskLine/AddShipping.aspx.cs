@@ -17,14 +17,15 @@ namespace MaerskLine
         {
             dropDownBeginning.Items[0].Attributes.Add("disabled", "disabled");
             dropDownArrival.Items[0].Attributes.Add("disabled", "disabled");
+            name.Text = Session["userFirstName"].ToString();
         }
 
         protected void addShipping(object sender, EventArgs e)
         {
-            int shiptype = int.Parse(dropDownShipType.SelectedValue.Split(',')[0]);
+            var shiptype = dropDownShipType.SelectedItem.ToString();
             var addInfo = additionalInfo.Text;
-            int departurePortID = int.Parse(dropDownBeginning.SelectedValue.Split(',')[0]);
-            int arrivalPortID = int.Parse(dropDownArrival.SelectedValue.Split(',')[0]);
+            var departurePortID = dropDownBeginning.SelectedItem.ToString();
+            var arrivalPortID = dropDownArrival.SelectedItem.ToString();
             DateTime current = DateTime.Now;
             var status = WebConfigurationManager.AppSettings["pendingStatus"];
             double price = double.Parse(TotalPrice.Text);
@@ -56,11 +57,11 @@ namespace MaerskLine
 
             if (pass == 0)
             {
-                Response.Redirect("/ShippingList.aspx", false);
+                
             }
             else
             {
-                Response.Redirect("/AddShipping.aspx", false);
+                Response.Redirect("/ShippingList.aspx", false);
             }
         }
 

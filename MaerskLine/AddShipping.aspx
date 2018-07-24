@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Request for New Shipping" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddShipping.aspx.cs" Inherits="MaerskLine.AddShipping" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <h3>Hello! <asp:Label runat="server" Font-Bold="true" ForeColor="Yellow" ID="name"></asp:Label></h3>
     <h2><%: Title %></h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />

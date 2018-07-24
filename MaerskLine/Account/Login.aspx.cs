@@ -20,6 +20,7 @@ namespace MaerskLine.Account
             Session["userID"] = "";
             Session["userEmail"] = "";
             Session["userCredentials"] = "";
+            Session["userFirstName"] = "";
             Session["Login"] = "false";
 
             RegisterHyperLink.NavigateUrl = "Register";
@@ -74,7 +75,7 @@ namespace MaerskLine.Account
                 dbConnect.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
                 dbConnect.Open();
 
-                SqlCommand checkLogin = new SqlCommand("SELECT user_id,email_address,credentials FROM Users WHERE email_address=@email and password=@password", dbConnect);
+                SqlCommand checkLogin = new SqlCommand("SELECT user_id,email_address,credentials,first_name FROM Users WHERE email_address=@email and password=@password", dbConnect);
                 checkLogin.Parameters.Add(new SqlParameter("@email", Email.Text));
                 checkLogin.Parameters.Add(new SqlParameter("@password", Password.Text));
                 SqlDataReader reader = checkLogin.ExecuteReader();
@@ -83,12 +84,14 @@ namespace MaerskLine.Account
                 {
                     var userID = reader["user_id"].ToString();
                     int uID = int.Parse(userID);
+                    var firstName = reader["first_name"].ToString();
                     var credentials = reader["credentials"].ToString();
                     dbConnect.Close();
                     reader.Close();
 
                     Session["userID"] = uID;
                     Session["userEmail"] = Email.Text;
+                    Session["userFirstName"] = firstName;
                     Session["userCredentials"] = credentials;
                     Session["Login"] = "true";
 

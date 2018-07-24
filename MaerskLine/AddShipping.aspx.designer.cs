@@ -13,6 +13,15 @@ namespace MaerskLine {
     public partial class AddShipping {
         
         /// <summary>
+        /// name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label name;
+        
+        /// <summary>
         /// ErrorMessage control.
         /// </summary>
         /// <remarks>

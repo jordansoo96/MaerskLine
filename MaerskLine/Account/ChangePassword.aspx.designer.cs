@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MaerskLine {
+namespace MaerskLine.Account {
     
     
-    public partial class ShippingList {
+    public partial class ChangePassword {
         
         /// <summary>
         /// name control.
@@ -22,39 +22,30 @@ namespace MaerskLine {
         protected global::System.Web.UI.WebControls.Label name;
         
         /// <summary>
-        /// gvShippingList control.
+        /// ErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvShippingList;
+        protected global::System.Web.UI.WebControls.Literal ErrorMessage;
         
         /// <summary>
-        /// ShippingListDataSource control.
+        /// NewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ShippingListDataSource;
+        protected global::System.Web.UI.WebControls.TextBox NewPassword;
         
         /// <summary>
-        /// btnRequest control.
+        /// ConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRequest;
-        
-        /// <summary>
-        /// lblemptyShippingTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblemptyShippingTable;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
     }
 }
