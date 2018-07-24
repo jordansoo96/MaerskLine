@@ -62,6 +62,7 @@
                         <li><a runat="server" id="btnShippingList" href="~/ShippingList" visible="false">My Shipping List</a></li>
                         <li><a runat="server" id="btnRequestShipping" href="~/AddShipping" visible="false">Request New Shipping</a></li>
                         <li><a runat="server" id="btnShippingApproval" href="~/ApproveShipping" visible="false">Shipping Approval</a></li>
+                        <li><a runat="server" id="btnShippingReceival" href="~/ReceiveShipping" visible="false">Shipping Receival</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a runat="server" id="btnChange" href="~/Account/ChangePassword" visible="false">Change Password</a></li>

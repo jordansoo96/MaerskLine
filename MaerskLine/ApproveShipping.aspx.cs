@@ -37,7 +37,7 @@ namespace MaerskLine
         {
             var cmd = e.CommandName;
 
-            if (cmd.Equals("Approved"))
+            if (cmd.Equals("btnApprove"))
             {
                 int row = int.Parse(e.CommandArgument.ToString());
                 int shippingID = int.Parse(gvShippingApproval.Rows[row].Cells[0].Text);
@@ -65,11 +65,11 @@ namespace MaerskLine
                     Response.Redirect(Request.RawUrl);
                 }
             }
-            else if (cmd.Equals("Rejected"))
+            else if (cmd.Equals("btnDecline"))
             {
                 int row = int.Parse(e.CommandArgument.ToString());
                 int shippingID = int.Parse(gvShippingApproval.Rows[row].Cells[0].Text);
-                var shippingStatus = WebConfigurationManager.AppSettings["statusRejected"];
+                var shippingStatus = WebConfigurationManager.AppSettings["statusDeclined"];
 
                 SqlConnection dbConnect = new SqlConnection();
                 dbConnect.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;

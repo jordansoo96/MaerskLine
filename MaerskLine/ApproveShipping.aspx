@@ -4,7 +4,7 @@
     <h3>Hello! <asp:Label runat="server" Font-Bold="true" ForeColor="Yellow" ID="name"></asp:Label></h3>
     <h2><%: Title %></h2>
     <p>
-        <asp:GridView ID="gvShippingApproval" runat="server" AutoGenerateColumns="False" DataKeyNames="shipping_id" DataSourceID="ShippingApprovalDataSource" Width="1279px" CssClass="table table-striped table-bordered table-condensed">
+        <asp:GridView ID="gvShippingApproval" runat="server" AutoGenerateColumns="False" DataKeyNames="shipping_id" DataSourceID="ShippingApprovalDataSource" Width="1279px" CssClass="table table-striped table-bordered table-condensed" OnRowCommand="gvShippingApproval_RowCommand">
             <Columns>
                 <asp:BoundField DataField="shipping_id" HeaderText="Shipping ID" InsertVisible="False" ReadOnly="True" SortExpression="shipping_id" />
                 <asp:BoundField DataField="ship_type" HeaderText="Ship Types" SortExpression="ship_type" />
@@ -18,7 +18,7 @@
                 <asp:ButtonField CommandName="btnDecline" Text="Decline" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="ShippingApprovalDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MaerskLine2018DDAC_dbConnectionString %>" SelectCommand="SELECT * FROM [Shippings]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="ShippingApprovalDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MaerskLine2018DDAC_dbConnectionString %>" SelectCommand="SELECT * FROM [Shippings] WHERE status = 'Approved' OR status = 'Pending for Approval' OR status = 'Rejected'"></asp:SqlDataSource>
     </p>
 
     <div class="form-horizontal">

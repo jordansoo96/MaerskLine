@@ -40,6 +40,15 @@ namespace MaerskLine {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor btnShippingApproval;
         
         /// <summary>
+        /// btnShippingReceival control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnShippingReceival;
+        
+        /// <summary>
         /// btnChange control.
         /// </summary>
         /// <remarks>

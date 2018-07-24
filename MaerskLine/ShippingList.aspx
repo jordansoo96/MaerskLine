@@ -17,7 +17,7 @@
             <asp:ButtonField CommandName="RemoveShipping" Text="Remove" />
         </Columns>
     </asp:GridView>
-    <asp:SqlDataSource ID="ShippingListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MaerskLine2018DDAC_dbConnectionString %>" SelectCommand="SELECT * FROM [Shippings]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="ShippingListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MaerskLine2018DDAC_dbConnectionString %>" SelectCommand="SELECT * FROM [Shippings] WHERE status = 'Pending for Approval' OR status = 'Declined'"></asp:SqlDataSource>
 
         <div class="form-group">
             <div class="col-md-offset-0 col-md-10">
