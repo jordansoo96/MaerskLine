@@ -11,7 +11,7 @@ namespace MaerskLine
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            emptyShippingTable();
         }
 
         protected void requestShipping(object sender, EventArgs e)
@@ -19,7 +19,7 @@ namespace MaerskLine
             Response.Redirect("/AddShipping.aspx", false);
         }
 
-        protected void emptyShippingTable(object sender, EventArgs e)
+        private void emptyShippingTable()
         {
             int row = gvShippingList.Rows.Count;
 

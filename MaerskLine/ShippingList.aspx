@@ -25,7 +25,7 @@
 
         <div class="form-horizontal">
             <div class="form-group">
-                <asp:Label runat="server" ID="lblemptyShippingTable" style="text-align:left;" CssClass="col-md-12 control-label" Font-Size="Large" Visible="false">Currently there are none shippings coming in</asp:Label>
+                <asp:Label runat="server" ID="lblemptyShippingTable" style="text-align:left;" CssClass="col-md-12 control-label" Font-Size="X-Large" Visible="false">No shippings can be found. Please click the button above to request for new shipping.</asp:Label>
             </div>
         </div>
 </div>
