@@ -32,7 +32,7 @@ namespace MaerskLine
             SqlConnection dbConnect = new SqlConnection();
             dbConnect.ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
-            string addShipping = "INSERT INTO Shippings (ship_type,additional_info,departure_port,arrival_port,request_date,status,total_price)" + "VALUES (@shipType,@addInfo,@departPort,@arrivalPort,@date,@status,@totalPirce);";
+            string addShipping = "INSERT INTO Shippings (ship_type,additional_info,departure_port,arrival_port,request_date,status,total_price)" + "VALUES (@shipType,@addInfo,@departPort,@arrivalPort,@date,@status,@totalPrice);";
             SqlCommand cmdAddShipping = new SqlCommand(addShipping, dbConnect);
 
             cmdAddShipping.Parameters.Add("@shipType", SqlDbType.NVarChar);
@@ -56,7 +56,7 @@ namespace MaerskLine
 
             if (pass == 0)
             {
-
+                Response.Redirect("/ShippingList.aspx", false);
             }
             else
             {
