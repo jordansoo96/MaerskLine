@@ -98,7 +98,7 @@ namespace MaerskLine.Account
                     //Customer login
                     if (credentials.Equals("Staff"))
                     {
-                        Response.Redirect("/Account/ResetPassword",false);
+                        Response.Redirect("/ApproveShipping",false);
                     }
                     else if (credentials.Equals("Customer"))
                     {

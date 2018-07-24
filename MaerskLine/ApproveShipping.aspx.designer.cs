@@ -10,60 +10,42 @@
 namespace MaerskLine {
     
     
-    public partial class SiteMaster {
+    public partial class ApproveShipping {
         
         /// <summary>
-        /// btnShippingList control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnShippingList;
+        protected global::System.Web.UI.WebControls.Label name;
         
         /// <summary>
-        /// btnRequestShipping control.
+        /// gvShippingApproval control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnRequestShipping;
+        protected global::System.Web.UI.WebControls.GridView gvShippingApproval;
         
         /// <summary>
-        /// btnShippingApproval control.
+        /// ShippingApprovalDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnShippingApproval;
+        protected global::System.Web.UI.WebControls.SqlDataSource ShippingApprovalDataSource;
         
         /// <summary>
-        /// btnChange control.
+        /// lblemptyShippingTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnChange;
-        
-        /// <summary>
-        /// btnLogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnLogout;
-        
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lblemptyShippingTable;
     }
 }

@@ -94,6 +94,7 @@ namespace MaerskLine
                     }
                     else if (credentials.Equals("Staff"))
                     {
+                        btnShippingApproval.Visible = true;
                         btnChange.Visible = true;
                         btnLogout.Visible = true;
                     }
