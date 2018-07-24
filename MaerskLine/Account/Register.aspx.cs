@@ -65,15 +65,5 @@ namespace MaerskLine.Account
                 Response.Redirect("/Account/Login", false);
             }
         }
-
-        protected void Reset_Click(object sender, EventArgs e)
-        {
-            Email.Text = "";
-            FirstName.Text = "";
-            LastName.Text = "";
-            Password.Text = "";
-            ConfirmPassword.Text = "";
-            Email.Focus();
-        }
     }
 }
